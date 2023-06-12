@@ -38,7 +38,7 @@ export default function Page() {
           <ProfilePic />
         </div>
         <div className="max-w-sm mx-auto flex items-center space-x-4">
-          <p>Hello, I'm <b className="text-xl">Kathie.</b> I'm a third-year college student at Duke University planning on majoring in computer science and minoring in finance and Chinese.</p>
+          <p>Hello, I&apos;m <b className="text-xl">Kathie.</b> I am a third-year college student at Duke University planning on majoring in computer science and minoring in finance and Chinese.</p>
         </div>
         <div className={styles.grid}>
           <a
