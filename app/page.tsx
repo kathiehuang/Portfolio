@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import React from "react"
+import React, { useEffect }  from "react"
 import Layout from './index/layout'
 
 export default function Page() {
@@ -17,9 +17,19 @@ export default function Page() {
     />
   );
 
+  useEffect(() => {
+    // Disable scrolling on the body element
+    document.body.style.overflow = 'hidden';
+
+    // Re-enable scrolling on component unmount
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, []);
+
   return (
     <Layout>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate px-6 py-6 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -32,7 +42,7 @@ export default function Page() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl h-screen sm:py-48 lg:py-56">
           <div className="text-center">
             <div className="flex items-center">
               <h1 className="text-4xl tracking-tight px-6 text-gray-900 sm:text-6xl">
