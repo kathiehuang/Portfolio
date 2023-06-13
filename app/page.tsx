@@ -10,85 +10,67 @@ export default function Page() {
   const ProfilePic = () => (
     <Image
       src="/images/profile.jpeg" // Route of the image file
-      height={120} // Desired size with correct aspect ratio
-      width={120} // Desired size with correct aspect ratio
+      height={140} // Desired size with correct aspect ratio
+      width={140} // Desired size with correct aspect ratio
       alt="Kathie Huang"
+      className="rounded-full"
     />
   );
 
   return (
     <Layout>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            hey&nbsp;
-            <code className={styles.code}>shawty</code>
-          </p>
-          <div>
-            <a
-              href="mailto: kathiehuang@hotmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              by Kathie Huang
-            </a>
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <div className="flex items-center">
+              <h1 className="text-4xl tracking-tight px-6 text-gray-900 sm:text-6xl">
+                Hi! I&apos;m <b className="font-extrabold">Kathie</b>.
+              </h1>
+              <div><a href="https://www.linkedin.com/in/kathie-huang" target="_blank"><ProfilePic/></a></div>
+            </div>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+            I am a third-year college student at Duke University planning on 
+            majoring in computer science with minors in finance and Chinese.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="https://drive.google.com/file/d/1hS9QfuLECobOz6a95e6pDnyWUNKMw-PA/view?usp=sharing"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                target="_blank"
+              >
+                Resume
+              </a>
+              <a href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+                Learn more <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </div>
-        <div style={{ borderRadius: '50%', overflow: 'hidden' }}>
-          <ProfilePic />
+        <div
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
         </div>
-        <div className="max-w-sm mx-auto flex items-center space-x-4">
-          <p>Hello, I&apos;m <b className="text-xl">Kathie.</b> I am a third-year college student at Duke University planning on majoring in computer science and minoring in finance and Chinese.</p>
-        </div>
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-          </a>
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </div>
     </Layout>
   )
 }
