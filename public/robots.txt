@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kathiehuang.vercel.app/
+
+# Sitemaps
+Sitemap: https://kathiehuang.vercel.app/sitemap.xml
