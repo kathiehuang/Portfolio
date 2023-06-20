@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from "react";
+import Transitions from "./transitions";
 
 export default function CompanyBubble({
   companyName,
@@ -73,26 +74,28 @@ export default function CompanyBubble({
             className="fixed inset-0 flex items-center justify-center z-10"
             style={expandedBubbleStyle}
           >
-            <div className="max-w-lg p-4 bg-white rounded shadow-lg relative">
-              <button
-                className="text-gray-500 text-xl hover:text-gray-700 focus:outline-none absolute top-0 right-0 m-2"
-                onClick={handleClick}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-4 h-4"
+            <Transitions>
+              <div className="max-w-lg p-4 bg-white rounded shadow-lg relative">
+                <button
+                  className="text-gray-500 text-xl hover:text-gray-700 focus:outline-none absolute top-0 right-0 m-2"
+                  onClick={handleClick}
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M15.707 4.293a1 1 0 010 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707A1 1 0 015.707 4.293L10 8.586l4.293-4.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-              <div className="text-sm text-black">{description}</div>
-            </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M15.707 4.293a1 1 0 010 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707A1 1 0 015.707 4.293L10 8.586l4.293-4.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div className="text-sm text-black">{description}</div>
+              </div>
+            </Transitions>
           </div>
         )}
       </div>
