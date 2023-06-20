@@ -60,7 +60,12 @@ export default function HomePage() {
                             </p>
                         </Transitions>
                         <Transitions>
-                            <div className="mt-10 flex flex-col items-center gap-4">
+                            <p className="mt-6 text-md leading-8 text-teal-800 font-sans">
+                                Currently @ <span className="font-bold"> Warner Bros. Discovery</span>
+                            </p>
+                        </Transitions>
+                        <Transitions>
+                            <div className="mt-6 flex flex-col items-center gap-4">
                                     <a
                                         href="https://drive.google.com/file/d/1hS9QfuLECobOz6a95e6pDnyWUNKMw-PA/view?usp=sharing"
                                         className="rounded-md bg-cyan-50 px-3.5 py-2.5 text-sm text-black shadow-md hover:text-teal-800 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 font-sans"
@@ -68,7 +73,7 @@ export default function HomePage() {
                                     >
                                         Resume
                                     </a>
-                                    <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="hover:cursor-pointer text-sm font-semibold font-sans leading-6 text-teal-700 hover:text-stone-600 transition-opacity">Learn More <span aria-hidden="true">→</span></Link>
+                                    <Link to="about" spy={true} smooth={true} offset={50} duration={1000} className="hover:cursor-pointer text-sm font-semibold font-sans leading-6 text-teal-700 hover:text-stone-600 transition-opacity mt-2">Learn More <span aria-hidden="true">→</span></Link>
                             </div>
                         </Transitions>
                     </div>
