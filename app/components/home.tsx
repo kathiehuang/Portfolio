@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import '@fontsource/roboto';
 import '@fontsource/open-sans';
 import Transitions from './transitions';
+import { Link } from 'react-scroll'
 
 export default function HomePage() {
 
@@ -67,9 +68,7 @@ export default function HomePage() {
                                     >
                                         Resume
                                     </a>
-                                    <a href="/about" className="text-sm font-semibold font-sans leading-6 text-teal-700 hover:text-stone-600 transition-opacity">
-                                        Learn more <span aria-hidden="true">→</span>
-                                    </a>
+                                    <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="hover:cursor-pointer text-sm font-semibold font-sans leading-6 text-teal-700 hover:text-stone-600 transition-opacity">Learn More <span aria-hidden="true">→</span></Link>
                             </div>
                         </Transitions>
                     </div>

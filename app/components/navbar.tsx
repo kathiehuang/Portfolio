@@ -6,12 +6,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 import { Link } from 'react-scroll'
 
-const navigation = [
-  { name: 'home', href: '/' },
-  { name: 'about', href: '/about' },
-  { name: 'projects', href: '/projects' },
-]
-
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
