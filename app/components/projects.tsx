@@ -15,7 +15,7 @@ export default function ProjectsPage() {
             name: "MusicMap",
             duration: "Sep 2022 - Jan 2022",
             link: "https://github.com/nyu12345/MusicMap",
-            description: "Music Map was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app&apos;s profile page, which performs API calls to authenticate users via Spotify login and displays the user&apos;s Spotify information, including their profile picture, number of friends, and sent and received requests",
+            description: "Music Map was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app's profile page, which performs API calls to authenticate users via Spotify login and displays the user's Spotify information, including their profile picture, number of friends, and sent and received requests",
             imageSrc: "/images/musicmap.png",
             alt: "Music Map"
         },
@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             name: "Haplotype Calling Pipeline",
             duration: "Jan 2022 - May 2023",
             link: "https://github.com/kathiehuang/haplotype_calling_pipeline",
-            description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done at the Malaria Collaboratory, I will be listed as a second author for one of the Post-doctoral Associate&apos;s manuscripts, which I am super excited about!",
+            description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done at the Malaria Collaboratory, I will be listed as a second author for one of the Post-doctoral Associate's manuscripts, which I am super excited about!",
             imageSrc: "/images/haplotype.png",
             alt: "Haplotype Calling Pipeline"
         }
