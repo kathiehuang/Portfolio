@@ -1,36 +1,33 @@
 'use client'
 
 import React from "react";
-import Link from 'next/link'
 import Image from 'next/image'
-import Layout from '../index/layout'
 import { useState } from 'react'
 import styles from '../page.module.css'
 import '@fontsource/open-sans';
 import '@fontsource/roboto'
-import Footer from "../components/footer";
+import Transitions from "./transitions";
 
-export default function Page() {
+export default function ProjectsPage() {
 
-    const MusicMapPic = () => (
-        <Image
-            src="/images/musicmap.png" // Route of the image file
-            height={322} // Desired size with correct aspect ratio
-            width={450} // Desired size with correct aspect ratio
-            alt="Music Map"
-            className="rounded-3xl"
-        />
-    );
-
-    const HaplotypePic = () => (
-        <Image
-            src="/images/haplotype.png" // Route of the image file
-            height={322} // Desired size with correct aspect ratio
-            width={450} // Desired size with correct aspect ratio
-            alt="Haplotype Calling Pipeline"
-            className="rounded-3xl"
-        />
-    );
+    const projects = [
+        {
+            name: "MusicMap",
+            duration: "Sep 2022 - Jan 2022",
+            link: "https://github.com/nyu12345/MusicMap",
+            description: "Music Map was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app&apos;s profile page, which performs API calls to authenticate users via Spotify login and displays the user&apos;s Spotify information, including their profile picture, number of friends, and sent and received requests",
+            imageSrc: "/images/musicmap.png",
+            alt: "Music Map"
+        },
+        {
+            name: "Haplotype Calling Pipeline",
+            duration: "Jan 2022 - May 2023",
+            link: "https://github.com/kathiehuang/haplotype_calling_pipeline",
+            description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done at the Malaria Collaboratory, I will be listed as a second author for one of the Post-doctoral Associate&apos;s manuscripts, which I am super excited about!",
+            imageSrc: "/images/haplotype.png",
+            alt: "Haplotype Calling Pipeline"
+        }
+    ]
 
     const awards = [
         {
@@ -98,7 +95,6 @@ export default function Page() {
             date: "Jan 2020",
             description: "1 of 3 female juniors at Liberty High School selected by staff to be recognized as excelling in areas of science, technology, engineering, and/or mathematics (STEM)."
         },
-
     ];
 
     const [activeAward, setActiveAward] = useState(null);
@@ -108,42 +104,43 @@ export default function Page() {
     }
 
     return (
-        <Layout>
-            <div className="relative isolate px-6 pt-14 lg:px-8">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#00ffee] via-[#b9f8ff] to-[#0022ff]" style={{ mixBlendMode: "multiply", opacity: "0.4", zIndex: "-1" }} />
-                <div className="mx-auto items-center justify-center md:justify-between px-4">
-                    <h1 className="text-4xl font-bold mb-5 w-[180px] justify-center flex content-center text-center mx-auto mt-2 font-mono">Projects</h1>
-                    <div className="container mx-auto grid md:grid-cols-2 gap-10">
-                        <div className="grid-rows-3">
-                            <div><strong className="justify-center flex font-mono">Music Map</strong></div>
-                            <div><small className="justify-center flex font-mono">Sep 2022 - Jan 2022</small></div>
-                            <div className="flex justify-center mt-2 hover:opacity-70 transition-all"><a href="https://github.com/nyu12345/MusicMap" target="_blank"><MusicMapPic /></a></div>
-                        </div>
-                        <p className="items-center flex text-center font-sans">Music Map was a class project I worked on with a team of 6 for my Database Systems class.
-                            Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips.
-                            I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username.
-                            I also worked on creating the frontend and backend for the app&apos;s profile page, which performs API calls to authenticate users via Spotify login and displays the user&apos;s Spotify information, including their profile picture, number of friends, and sent and received requests.</p>
-                    </div>
-                    <div className="container mx-auto grid md:grid-cols-2 gap-10 mt-8">
-                        <div className="grid-rows-3">
-                            <div><strong className="justify-center flex font-mono">Haplotype Calling Pipeline</strong></div>
-                            <div><small className="justify-center flex font-mono">Jan 2022 - May 2023</small></div>
-                            <div className="flex justify-center mt-2 hover:opacity-70 transition-all"><a href="https://github.com/kathiehuang/haplotype_calling_pipeline" target="_blank"><HaplotypePic /></a></div>
-                        </div>
-                        <p className="items-center flex text-center font-sans">I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake.
-                            The pipeline takes in raw data and outputs relevant sample-level haplotype information.
-                            I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique.
-                            For the work I have done at the Malaria Collaboratory, I will be listed as a second author for one of the Post-doctoral Associate&apos;s manuscripts, which I am super excited about!</p>
-                    </div>
+        <div className="relative isolate px-6 pt-14 lg:px-8" id='projects'>
+            <div className="mx-auto items-center justify-center md:justify-between px-4">
+                <Transitions>
+                    <h1 className="text-4xl font-bold w-[180px] justify-center flex content-center text-center mx-auto mt-2 font-mono">Projects</h1>
+                </Transitions>
+                <div>
+                    {projects.map((project, index) => (
+                        <Transitions key={index}>
+                            <div className="container mx-auto grid md:grid-cols-2 gap-10 pt-4">
+                                <div className="grid-rows-3">
+                                    <div><strong className="justify-center flex font-mono">{project.name}</strong></div>
+                                    <div><small className="justify-center flex font-mono">{project.duration}</small></div>
+                                    <div className="flex justify-center mt-2 hover:opacity-70 transition-all"><a href={project.link} target="_blank">        <Image
+                                        src={project.imageSrc}
+                                        height={322}
+                                        width={450}
+                                        alt={project.alt}
+                                        className="rounded-3xl"
+                                    /></a></div>
+                                </div>
+                                <p className="items-center flex text-center font-sans">{project.description}</p>
+                            </div>
+                        </Transitions>
+                    ))}
                 </div>
-                <div className="mx-auto items-center justify-center md:justify-between mt-8 px-4 container">
+            </div>
+            <div className="mx-auto items-center justify-center md:justify-between mt-8 px-4 container" id='awards'>
+                <Transitions>
                     <h1 className="text-xl font-bold mb-3 text-center font-mono">Awards and Honors</h1>
+                </Transitions>
+                <Transitions>
                     <div className="flex justify-center font-sans">
                         <ul className="mx-auto text-left max-w-screen-lg">
                             {awards.map((award, index) => (
                                 <li
                                     key={index}
-                                    className={`py-3 px-4 relative transition-colors duration-300 ${activeAward === index ? 'bg-sky-200' : ''}`}
+                                    className={`py-3 px-4 relative transition-colors duration-300 rounded-md ${activeAward === index ? 'bg-sky-200' : ''}`}
                                     onMouseEnter={() => handleAwardClick(index)}
                                     onMouseLeave={() => handleAwardClick(index)}
                                     onClick={() => handleAwardClick(index)}
@@ -160,9 +157,8 @@ export default function Page() {
                             ))}
                         </ul>
                     </div>
-                </div>
-                <Footer />
+                </Transitions>
             </div>
-        </Layout>
+        </div>
     )
 }
