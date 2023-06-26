@@ -15,7 +15,7 @@ export default function ProjectsPage() {
             name: "MusicMap",
             duration: "Sep 2022 - Jan 2022",
             link: "https://github.com/nyu12345/MusicMap",
-            description: "Music Map was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app's profile page, which performs API calls to authenticate users via Spotify login and displays the user's Spotify information, including their profile picture, number of friends, and sent and received requests",
+            description: "Music Map was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app's profile page, which performs API calls to authenticate users via Spotify login and displays the user's Spotify information, including their profile picture, number of friends, and sent and received requests.",
             imageSrc: "/images/musicmap.png",
             alt: "Music Map"
         },

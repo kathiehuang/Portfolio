@@ -7,6 +7,7 @@ import '@fontsource/roboto';
 import '@fontsource/open-sans';
 import Transitions from './transitions';
 import { Link } from 'react-scroll'
+import HighlightedText from './highlightedText';
 
 export default function HomePage() {
 
@@ -33,6 +34,7 @@ export default function HomePage() {
     return (
         <div className="relative px-6 py-6 lg:px-8" id='/'>
             <div className="mx-auto max-w-2xl h-screen flex flex-col justify-center">
+                <HighlightedText />
                     <div className="text-center">
                             <Transitions>
                                 <div className="flex items-center justify-center">
