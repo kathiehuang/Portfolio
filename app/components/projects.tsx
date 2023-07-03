@@ -56,6 +56,11 @@ export default function ProjectsPage() {
             description: ""
         },
         {
+            title: "Google Generation Scholar",
+            date: "Apr 2021",
+            description: "Recipient of the Google Generation Scholarship"
+        },
+        {
             title: "Science Olympiad State Medalist",
             date: "Apr 2021",
             description: "Placed 2nd for the Code Analysis event in the WA Science Olympiad State Competition"
