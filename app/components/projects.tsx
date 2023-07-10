@@ -15,7 +15,7 @@ export default function ProjectsPage() {
             name: "MusicMap",
             duration: "Sep 2022 - Jan 2022",
             link: "https://github.com/nyu12345/MusicMap",
-            description: "Music Map was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app's profile page, which performs API calls to authenticate users via Spotify login and displays the user's Spotify information, including their profile picture, number of friends, and sent and received requests.",
+            description: "MusicMap was a class project I worked on with a team of 6 for my Database Systems class. Together, we developed a React Native application using MongoDB for the backend that allows users to track songs played and memories made during road trips. I designed and implemented a friendship request system and added a search feature to find friends by name and Spotify username. I also worked on creating the frontend and backend for the app's profile page, which performs API calls to authenticate users via Spotify login and displays the user's Spotify information, including their profile picture, number of friends, and sent and received requests.",
             imageSrc: "/images/musicmap.png",
             alt: "Music Map"
         },
@@ -26,6 +26,14 @@ export default function ProjectsPage() {
             description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done at the Malaria Collaboratory, I will be listed as a second author for one of the Post-doctoral Associate's manuscripts, which I am super excited about!",
             imageSrc: "/images/haplotype.png",
             alt: "Haplotype Calling Pipeline"
+        },
+        {
+            name: "Todo App",
+            duration: "July 2023",
+            link: "https://todos.kathiehuang.com/",
+            description: "This to-do app is a project I developed using Next.js, Prisma, and PlanetScale. It allows users add, mark as done, and delete tasks in a simple and intuitive way. The frontend is built with React, and it communicates with the backend API implemented with Next.js serverless functions. The backend uses Prisma as the ORM to interact with the MySQL database hosted on PlanetScale, a distributed database platform. PlanetScale provides scalability and reliability for the app's data storage. The app dynamically updates the task list, ensuring a seamless user experience. This was a fun project I made to practice and improve my full-stack development skills.",
+            imageSrc: "/images/todo-app.png",
+            alt: "Todo App",
         }
     ]
 
