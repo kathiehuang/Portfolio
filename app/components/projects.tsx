@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             name: "Haplotype Calling Pipeline",
             duration: "Jan 2022 - May 2023",
             link: "https://github.com/kathiehuang/haplotype_calling_pipeline",
-            description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done at the Malaria Collaboratory, I will be listed as a second author for one of the Post-doctoral Associate's manuscripts, which I am super excited about!",
+            description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done with this project, I will be listed as a co-author on one of the postdoc's manuscripts, which presents an optimization study on amplicon deep sequencing of malaria parasite marker genes from dried blood spots, showcasing successful haplotype recovery while addressing challenges related to false positive rates, low-density samples, and minority haplotypes. It's super cool to think that my contributions, no matter how small, are making an impact in the field of malaria studies, and it inspires me to continue pursuing opportunities where I can create even bigger positive changes in the future!",
             imageSrc: "/images/haplotype.png",
             alt: "Haplotype Calling Pipeline"
         },
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
             name: "Todo App",
             duration: "July 2023",
             link: "https://todos.kathiehuang.com/",
-            description: "This to-do app is a project I developed using Next.js, Prisma, and PlanetScale. It allows users add, mark as done, and delete tasks in a simple and intuitive way. The frontend is built with React, and it communicates with the backend API implemented with Next.js serverless functions. The backend uses Prisma as the ORM to interact with the MySQL database hosted on PlanetScale, a distributed database platform. PlanetScale provides scalability and reliability for the app's data storage. The app dynamically updates the task list, ensuring a seamless user experience. This was a fun project I made to practice and improve my full-stack development skills.",
+            description: "This to-do app is a project I developed using Next.js, Prisma, and PlanetScale that allows users to add, check off, and delete tasks. The frontend is built with React, and it communicates with the backend API implemented with Next.js serverless functions. The backend uses Prisma as the ORM to interact with the MySQL database hosted on PlanetScale, which provides scalability and reliability for the app's data storage. This was a fun project I made to practice and improve my full-stack development skills 🙂",
             imageSrc: "/images/todo-app.png",
             alt: "Todo App",
         }
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
     }
 
     return (
-        <div className="relative isolate px-6 pt-14 lg:px-8" id='projects'>
+        <div className="relative isolate px-6 pt-14 lg:px-8 z-50" id='projects'>
             <div className="mx-auto items-center justify-center md:justify-between px-4">
                 <Transitions>
                     <h1 className="text-4xl font-bold w-[180px] justify-center flex content-center text-center mx-auto mt-2 font-mono">Projects</h1>
@@ -129,13 +129,16 @@ export default function ProjectsPage() {
                                 <div className="grid-rows-3">
                                     <div><strong className="justify-center flex font-mono">{project.name}</strong></div>
                                     <div><small className="justify-center flex font-mono">{project.duration}</small></div>
-                                    <div className="flex justify-center mt-2 hover:opacity-70 transition-all"><a href={project.link} target="_blank">        <Image
-                                        src={project.imageSrc}
-                                        height={322}
-                                        width={450}
-                                        alt={project.alt}
-                                        className="rounded-3xl"
-                                    /></a></div>
+                                    <div className="flex justify-center mt-2 hover:opacity-70 transition-all"><a href={project.link} target="_blank">
+                                        <Image
+                                            src={project.imageSrc}
+                                            height={322}
+                                            width={450}
+                                            alt={project.alt}
+                                            className="rounded-3xl h-72 object-cover"
+                                        />
+                                    </a>
+                                    </div>
                                 </div>
                                 <p className="items-center flex text-center font-sans">{project.description}</p>
                             </div>
