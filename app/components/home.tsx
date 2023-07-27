@@ -40,7 +40,7 @@ export default function HomePage() {
                     <Transitions>
                         <div className="flex items-center justify-center">
                             <h1 className="text-4xl tracking-tight px-6 text-gray-900 sm:text-6xl">
-                                Hi! I&apos;m <b className="font-bold font-sans">Kathie</b>.
+                                Hi! I&apos;m <span className="font-black font-sans">Kathie</span>.
                             </h1>
                             <div className="hidden lg:block">
                                 <a className="cursor-default bg-black rounded-full hover:opacity-50 opacity-100 transition-opacity ml-4" href="https://www.linkedin.com/in/kathie-huang" target="_blank">
@@ -70,7 +70,7 @@ export default function HomePage() {
                     <Transitions>
                         <div className="mt-6 flex flex-col items-center gap-4">
                             <a
-                                href="https://drive.google.com/file/d/1hS9QfuLECobOz6a95e6pDnyWUNKMw-PA/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1R7y_BCj-WqJyQO0oaqiz0V1VQbQdt4Rd/view?usp=sharing"
                                 className="rounded-md bg-cyan-50 px-3.5 py-2.5 text-sm text-black shadow-md hover:text-teal-800 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 font-sans"
                                 target="_blank"
                             >
