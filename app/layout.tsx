@@ -2,6 +2,7 @@ import React from 'react'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'Kathie Huang',
@@ -33,7 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          {children}
+          <Analytics />
+        </body>
       </head>
     </html>
   )
