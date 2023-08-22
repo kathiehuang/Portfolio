@@ -78,53 +78,53 @@ export default function AboutMePage() {
                 </h1>
             </Transitions>
             <Transitions>
-                <div className="grid grid-cols-1 md:grid-cols-3 pt-8">
-                    <div className="col-span-1 grid md:grid-rows-3">
-                            <div className="mb-4 md:mb-0">
-                                <CompanyBubble
-                                    companyName={surroundingBubbles[0].companyName}
-                                    duration={surroundingBubbles[0].duration}
-                                    description={surroundingBubbles[0].description}
-                                    imageSrc={surroundingBubbles[0].imageSrc}
-                                />
-                            </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 pt-8 md:pt-0" id='experience-section'>
+                    <div className="md:col-span-1 grid md:grid-rows-3">
+                        <div className="mb-4 md:mb-2">
+                            <CompanyBubble
+                                companyName={surroundingBubbles[0].companyName}
+                                duration={surroundingBubbles[0].duration}
+                                description={surroundingBubbles[0].description}
+                                imageSrc={surroundingBubbles[0].imageSrc}
+                            />
+                        </div>
                         <div className="hidden md:block"></div>
-                            <div className="mt-4 md:mt-0">
-                                <CompanyBubble
-                                    companyName={surroundingBubbles[3].companyName}
-                                    duration={surroundingBubbles[3].duration}
-                                    description={surroundingBubbles[3].description}
-                                    imageSrc={surroundingBubbles[3].imageSrc}
-                                />
-                            </div>
+                        <div className="mt-4 md:mt-0">
+                            <CompanyBubble
+                                companyName={surroundingBubbles[3].companyName}
+                                duration={surroundingBubbles[3].duration}
+                                description={surroundingBubbles[3].description}
+                                imageSrc={surroundingBubbles[3].imageSrc}
+                            />
+                        </div>
                     </div>
-                            <div className="flex md:row-span-1 justify-center">
-                                        <CompanyBubble
-                                            companyName={mainBubble.companyName}
-                                            duration={mainBubble.duration}
-                                            description={mainBubble.description}
-                                            imageSrc={mainBubble.imageSrc}
-                                            isMain={true}
-                                        />
-                            </div>
-                    <div className="col-span-1 grid md:grid-rows-3">
-                            <div className="mb-4 md:mb-0">
-                                <CompanyBubble
-                                    companyName={surroundingBubbles[1].companyName}
-                                    duration={surroundingBubbles[1].duration}
-                                    description={surroundingBubbles[1].description}
-                                    imageSrc={surroundingBubbles[1].imageSrc}
-                                />
-                            </div>
+                    <div className="col-span-1 flex md:row-span-1 justify-center">
+                        <CompanyBubble
+                            companyName={mainBubble.companyName}
+                            duration={mainBubble.duration}
+                            description={mainBubble.description}
+                            imageSrc={mainBubble.imageSrc}
+                            isMain={true}
+                        />
+                    </div>
+                    <div className="md:col-span-1 grid md:grid-rows-3">
+                        <div className="mb-4 md:mb-2">
+                            <CompanyBubble
+                                companyName={surroundingBubbles[1].companyName}
+                                duration={surroundingBubbles[1].duration}
+                                description={surroundingBubbles[1].description}
+                                imageSrc={surroundingBubbles[1].imageSrc}
+                            />
+                        </div>
                         <div className="hidden md:block"></div>
-                            <div className="mt-4 md:mt-0">
-                                <CompanyBubble
-                                    companyName={surroundingBubbles[2].companyName}
-                                    duration={surroundingBubbles[2].duration}
-                                    description={surroundingBubbles[2].description}
-                                    imageSrc={surroundingBubbles[2].imageSrc}
-                                />
-                            </div>
+                        <div className="mt-4 md:mt-0">
+                            <CompanyBubble
+                                companyName={surroundingBubbles[2].companyName}
+                                duration={surroundingBubbles[2].duration}
+                                description={surroundingBubbles[2].description}
+                                imageSrc={surroundingBubbles[2].imageSrc}
+                            />
+                        </div>
                     </div>
                     <div className="py-12"></div>
                 </div>

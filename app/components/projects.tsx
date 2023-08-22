@@ -140,7 +140,7 @@ export default function ProjectsPage() {
                                             height={322}
                                             width={450}
                                             alt={project.alt}
-                                            className="rounded-3xl h-72 object-cover"
+                                            className="rounded-3xl object-cover w-full h-auto md:h-[322px] md:w-[450px]"
                                         />
                                     </a>
                                     </div>

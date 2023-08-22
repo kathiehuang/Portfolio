@@ -13,6 +13,7 @@ export default function CompanyBubble({
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [isBelowViewport, setIsBelowViewport] = useState(false);
+  const [isClickedOpacity, setIsClickedOpacity] = useState(1);
 
   const bubbleRef = useRef(null);
 
@@ -29,19 +30,29 @@ export default function CompanyBubble({
     setIsHovered(false);
   };
 
-  const bubbleSize = isMain ? "w-80 h-80" : "w-40 h-40";
-  const bubbleMargin = isMain ? "m-0" : "m-0";
-  const hoverSize = isMain ? "hover:w-96 hover:h-96" : "hover:w-52 hover:h-52";
+  const bubbleSize = isMain
+    ? "w-40 h-40 md:w-80 md:h-80"
+    : "w-24 h-24 md:w-40 md:h-40"; // Adjusted size for mobile screens
+  const bubbleMargin = isMain ? "m-0" : "m-2"; // Adjusted margin for mobile screens
+  const hoverSize = isMain
+    ? "hover:w-52 hover:h-52 md:hover:w-96 md:hover:h-96"
+    : "hover:w-32 hover:h-32 md:hover:w-52 md:hover:h-52"; // Adjusted hover size for mobile screens
 
   useEffect(() => {
     const handleScroll = () => {
-      const { bottom } = bubbleRef.current.getBoundingClientRect();
-      setIsBelowViewport(bottom > window.innerHeight);
+      const experienceSection = document.getElementById('experience-section');
+      const experienceBottom = experienceSection.getBoundingClientRect().bottom;
+
+      if (isClicked && experienceBottom < window.innerHeight) {
+        const opacity = Math.max(0, 1 - (window.innerHeight - experienceBottom) / 100);
+        setIsClickedOpacity(opacity);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isClicked]);
+
 
   const expandedBubbleStyle = isBelowViewport ? { bottom: 0 } : {};
 
@@ -57,9 +68,8 @@ export default function CompanyBubble({
         onClick={handleClick}
       >
         <img
-          className={`absolute inset-0 w-full h-full object-cover rounded-full overflow-hidden ${hoverSize}  ${
-            isHovered || isClicked ? "opacity-50 transition-all" : "opacity-100"
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover rounded-full overflow-hidden ${hoverSize}  ${isHovered || isClicked ? "opacity-50 transition-all" : "opacity-100"
+            }`}
           src={imageSrc}
           alt={companyName}
         />
@@ -72,7 +82,7 @@ export default function CompanyBubble({
         {isClicked && (
           <div
             className="fixed inset-0 flex items-center justify-center z-10"
-            style={expandedBubbleStyle}
+            style={{ ...expandedBubbleStyle, opacity: isClickedOpacity }}
           >
             <Transitions>
               <div className="max-w-lg p-4 bg-white rounded shadow-lg relative">
@@ -93,6 +103,7 @@ export default function CompanyBubble({
                     />
                   </svg>
                 </button>
+                <p className="text-xs text-center text-black font-bold lg:hidden">{duration}</p>
                 <div className="text-sm text-black">{description}</div>
               </div>
             </Transitions>
