@@ -10,7 +10,7 @@ const surroundingBubbles = [
         companyName: "Ford Motor Company",
         duration: "May 2022 - Aug 2022",
         description:
-            "At Ford, I worked as a software engineering intern to consolidate Ford developer portals using Spotify's Backstage.io. I built plugins using React and peer-programmed with other interns and my team, and I learned a lot about production development and the importance of collaboration in programming.",
+            "At Ford the summer after freshman year of college, I worked as a software engineering intern to consolidate Ford developer portals using Spotify's Backstage.io. I built plugins using React and peer-programmed with other interns and my team, and I learned a lot about production development and the importance of collaboration in programming.",
         imageSrc: "/images/ford.png"
     },
     {
@@ -40,7 +40,7 @@ const mainBubble = {
     companyName: "Warner Bros. Discovery",
     duration: "June 2023 - Present",
     description:
-        "As a software engineering intern at WBD, I will be working on metadata management and publishing workflow for the direct-to-consumer product.",
+        "As a software engineering intern at WBD this summer, I worked on metadata management and publishing workflow for the direct-to-consumer product, building two internal command-line tools using Go to migrate content between production and stage environments for quality assurance testing to improve the monetized playback experience of Max customers (lol). It was really cool immersing myself into the work environment, exploring all the different parts of the company, and thinking about where I want to be 10 years from now. I learned something new every day, whether it was from working on my project, attending an intern event, having a coffee chat with a product manager I reached out to, or even just making post-standup small talk with someone on my team. The insights I've gained from this internship will continue to guide me as I begin my journey as a software engineer, and I'm super excited for what's to come in my career.",
     imageSrc: "/images/warnerbros.jpg"
 };
 
