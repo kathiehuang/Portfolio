@@ -56,7 +56,7 @@ export default function AboutMePage() {
                 <div className="text-center font-sans">
                     <Transitions>
                         <p className="pb-5 font-medium ">
-                            Hi there! My name is Kathie. I&apos;m from Renton, WA, but I go to school in North Carolina, and I will be in Spain this fall!
+                            Hi there! My name is Kathie. I&apos;m from Renton, WA, but I go to school in North Carolina.
                         </p>
                     </Transitions>
                     <Transitions>
