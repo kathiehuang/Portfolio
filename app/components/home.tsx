@@ -58,13 +58,13 @@ export default function HomePage() {
                     </Transitions>
                     <Transitions>
                         <p className="mt-6 text-lg leading-8 text-gray-600 font-sans">
-                            I am a third-year college student at Duke University planning on
+                            I am a fourth-year college student at Duke University planning on
                             majoring in computer science with minors in finance and Chinese.
                         </p>
                     </Transitions>
                     <Transitions>
                         <p className="mt-6 text-md leading-8 text-teal-800 font-sans">
-                            Currently @ <span className="font-bold"> Warner Bros. Discovery</span>
+                            Currently @ <span className="font-bold"> SeatGeek</span>
                         </p>
                     </Transitions>
                     <Transitions>

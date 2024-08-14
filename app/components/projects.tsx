@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             name: "Haplotype Calling Pipeline",
             duration: "Jan 2022 - May 2023",
             link: "https://github.com/duke-malaria-collaboratory/BRAVA",
-            description: "I worked as a student researcher at the Duke Malaria Collaboratory for around a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done with this project, I will be listed as a co-author on one of the postdoc's manuscripts, which presents an optimization study on amplicon deep sequencing of malaria parasite marker genes from dried blood spots, showcasing successful haplotype recovery while addressing challenges related to false positive rates, low-density samples, and minority haplotypes. It's super cool to think that my contributions, no matter how small, are making an impact in the field of malaria studies, and it inspires me to continue pursuing opportunities where I can make even bigger positive changes in the future!",
+            description: "I worked as a student researcher at the Duke Malaria Collaboratory for a year and a half during the school year, building a bioinformatic pipeline using the workflow management system Snakemake. The pipeline takes in raw data and outputs relevant sample-level haplotype information. I also got the opportunity to use the pipeline I developed to analyze the correlation of drug-resistance allele frequencies in children and different pools of pregnant women located in regions of Mozambique. For the work I have done with this project, I will be listed as a co-author on one of the postdoc's manuscripts, which presents an optimization study on amplicon deep sequencing of malaria parasite marker genes from dried blood spots, showcasing successful haplotype recovery while addressing challenges related to false positive rates, low-density samples, and minority haplotypes. It's super cool to think that my contributions, no matter how small, are making an impact in the field of malaria studies, and it inspires me to continue pursuing opportunities where I can make even bigger positive changes in the future!",
             imageSrc: "/images/haplotype.png",
             alt: "Haplotype Calling Pipeline"
         },
@@ -31,13 +31,18 @@ export default function ProjectsPage() {
             name: "Todo App",
             duration: "July 2023",
             link: "https://todos.kathiehuang.com/",
-            description: "This to-do app is a project I developed using Next.js, Prisma, and PlanetScale that allows users to add, check off, and delete tasks, with buttons to filter tasks based on completion. The frontend is built with React, and it communicates with the backend API implemented with Next.js serverless functions. The backend uses Prisma as the ORM to interact with the MySQL database hosted on PlanetScale, which provides scalability and reliability for the app's data storage. This was a fun project I made to practice and improve my full-stack development skills 🙂",
+            description: "This to-do app is a project I developed using Next.js, Prisma, and PlanetScale that allows users to add, check off, and delete tasks, with buttons to filter tasks based on completion. The frontend is built with React, and it communicates with the backend API implemented with Next.js serverless functions. The backend uses Prisma as the ORM to interact with the MySQL database hosted on PlanetScale, which provides scalability and reliability for the app's data storage. PlanetScale has since retired their free plan, so this doesn't work anymore, but it was a fun project I made to practice and improve my full-stack development skills 🙂",
             imageSrc: "/images/todo.png",
             alt: "Todo App",
         }
     ]
 
     const awards = [
+        {
+            title: "Delta Gamma Epsilon Nu Chapter Scholarship",
+            date: "Jul 2024",
+            description: "Selected as a recipient of the merit-based undergraduate Delta Gamma Epsilon Nu Chapter Scholarship by the Delta Gamma Foundation out of 1,000 applicants."
+        },
         {
             title: "Delta Gamma Fraternity Management Corporation Scholarship",
             date: "Jul 2023",
