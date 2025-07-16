@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://kathiehuang.vercel.app/',
+    siteUrl: process.env.SITE_URL || 'https://kathiehuang.com',
     generateRobotsTxt: true, // (optional)
     // ...other options
   }
