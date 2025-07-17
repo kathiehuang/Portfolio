@@ -13,6 +13,7 @@
     "@fontsource/open-sans": "^5.0.3",
     "@fontsource/roboto": "^5.0.3",
     "@headlessui/react": "^2.2.4",
+    "@heroicons/react": "^2.2.0",
     "@material-tailwind/react": "^2.0.1",
     "@vercel/analytics": "^1.0.1",
     "braces": "^3.0.3",
